@@ -6,7 +6,7 @@ Extensions, settings and shortcuts are mainly configured for the **frontend deve
 
 The settings use the **[Fira Code](https://github.com/tonsky/FiraCode)** font, so it is also installed when installing extensions and importing settings and shortcuts.
 
-### Installation
+## Installation
 
 Download or clone the repository and then run the bash file:
 
@@ -24,7 +24,7 @@ sudo chmod u+x vscode-settings-and-extensions-import.sh
 
 And then try running the file again
 
-### List of extensions (with authors):
+### List of extensions (with authors)
 
 - [Auto Close Tag (Jun Han)](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
 - [Auto Import (steoates)](https://marketplace.visualstudio.com/items?itemName=steoates.autoimport)
