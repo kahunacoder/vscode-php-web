@@ -8,13 +8,12 @@ Extensions, settings and shortcuts are mainly configured for the **full stack we
 
 The settings use the **[Fira Code](https://github.com/tonsky/FiraCode)** font, so it is also installed when installing extensions and importing settings and shortcuts.
 
-
 ## Installation
 
-Download or clone the repository and then run the bash file:
+With curl installed:
 
 ```bash
-./vscode-php-web.sh
+curl -s https://raw.githubusercontent.com/kahunacoder/vscode-php-web/master/vscode-php-web.sh | bash
 ```
 
 ### In case of permission issues
@@ -83,6 +82,7 @@ And then try running the file again
   "composerCompanion.enabled": true,
   "composerCompanion.executablePath": "/usr/local/bin/composer",
   "terminal.external.osxExec": "iTerm.app",
+  // "terminal.integrated.shell.osx": "/bin/zsh",
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.fontFamily": "FuraCode Nerd Font",
   "terminal.integrated.scrollback": 5000,
@@ -134,6 +134,13 @@ And then try running the file again
       }
     ]
   },
+  // "eslint.validate": [
+  //   "javascript",
+  //   "javascriptreact",
+  //   {
+  //     "language": "vue"
+  //   }
+  // ],
   "eslint.alwaysShowStatus": true,
   "vetur.format.defaultFormatter.html": "prettyhtml",
   "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
@@ -162,6 +169,7 @@ And then try running the file again
     "html"
   ],
   "cSpell.language": ",en-US,en",
+  // "markdown.extension.preview.autoShowPreviewToSide": true,
   "cSpell.userWords": [
     "Gmail",
     "lokijs",
@@ -186,6 +194,9 @@ And then try running the file again
     "suppressLineUncommittedWarning": true
   },
   "workbench.statusBar.feedback.visible": false,
+  "sync.gist": "254d1bb34ff235e7cdb8f37020f25cd4",
+  "sync.autoUpload": true,
+  "sync.autoDownload": true,
   "typescript.preferences.quoteStyle": "single",
   "cSpell.allowCompoundWords": true,
   "rest-client.previewResponseInUntitledDocument": true,
@@ -221,18 +232,46 @@ And then try running the file again
   },
   "breadcrumbs.enabled": true,
   "vetur.completion.useScaffoldSnippets": false,
+  "sshfs.configs": [
+    {
+      "host": "nene.kc.gs",
+      "label": "nene",
+      "name": "nene",
+      "privateKeyPath": "/Users/gts/.ssh/id_rsa",
+      "root": "~/",
+      "username": "kirk"
+    },
+    {
+      "name": "ESDev2",
+      "host": "dev2.endless-sphere.com",
+      "port": 2204,
+      "root": "/var/www/html/xenforo",
+      "username": "esdev",
+      "privateKeyPath": "/Users/gts/.ssh/esdev"
+    }
+  ],
   "docker.groupImagesBy": "Repository",
   "markdown.preview.breaks": true,
+  // "terminal.integrated.shell.linux": "/usr/bin/zsh",
   "window.openFoldersInNewWindow": "off",
   "window.menuBarVisibility": "visible",
   "git.autofetch": true,
+  "gpg.passphrases": [
+    {
+      "email": "bk@kc.gs",
+      "description": "Gary Smith",
+      "passphrase": "Okayden#69"
+    }
+  ],
   "todo-tree.tree.showScanModeButton": false,
+  "sync.quietSync": true,
   "docker-explorer.showAzureRegistries": false,
   "docker-explorer.showDockerHubTreeView": false,
   "docker-explorer.showSuggestedDockerImages": false,
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "editor.codeActionsOnSave": {
+
     "source.fixAll.eslint": false
   },
   "tabnine.experimentalAutoImports": true,
@@ -250,9 +289,6 @@ And then try running the file again
     }
   },
   "workbench.editor.untitled.hint": "hidden",
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
-  },
   "yaml.customTags": [
     "!encrypted/pkcs1-oaep scalar",
     "!vault scalar"
@@ -280,13 +316,21 @@ And then try running the file again
   "window.zoomLevel": 1,
   "snyk.yesWelcomeNotification": false,
   "files.autoSave": "afterDelay",
+  "VSCodeNotion.accessToken": "72d4569e27a3c76e5098f94ead496083fd27eb1b769427cdbbda4acb3421bd0f132176c89b060759aaf9b4cb876d0e65e9008b2d7a55cc81b996aeb1a8b797d36c1d31b589e63434acd294c71fd9",
+  "VSCodeNotion.allowEmbeds": true,
   "sync.forceUpload": true,
+  "workbench.colorTheme": "Red",
   "workbench.iconTheme": "vscode-icons",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "reactSnippets.settings.prettierEnabled": true,
   "vsicons.dontShowNewVersionMessage": true,
+  "VSCodeNotion.api": "https://notion-api.splitbee.io/",
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "diffEditor.maxComputationTime": 0,
+  "remote.SSH.useLocalServer": false,
+  "remote.SSH.remotePlatform": {
+    "es": "linux"
+  },
   "php.suggest.basic": false,
   "php.validate.enable": false,
   "emmet.excludeLanguages": [
@@ -319,7 +363,10 @@ And then try running the file again
     "**/data/**",
     "**/internal_data/**"
   ],
+  "php.debug.ideKey": "VSCODE_XDEBUG",
+  "php.debug.executablePath": "/usr/bin/php",
   "markdown.preview.fontSize": 12,
+  "VSCodeNotion.fontSize": 12,
   "workbench.sideBar.location": "right",
   "editor.fontSize": 14,
   "bookmarks.sideBar.expanded": true,
