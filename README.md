@@ -1,17 +1,20 @@
-# vscode settings and extensions import
+# VS Code Settings for Full Stack Web Development with PHP
+
+These are the settings, extensions, fonts, applications and tips & tricks I use for web development using vscode.
 
 It is an executable bash script for installing selected extensions and importing settings and shortcuts into Visual Studio Code.
 
-Extensions, settings and shortcuts are mainly configured for the **frontend development**. In addition, it enables a fairly smooth transition from **WebStorm IDE** to **Visual Studio Code**.
+Extensions, settings and shortcuts are mainly configured for the **full stack web development**. In addition, it enables a fairly smooth transition from **PHPStorm IDE** to **Visual Studio Code**.
 
 The settings use the **[Fira Code](https://github.com/tonsky/FiraCode)** font, so it is also installed when installing extensions and importing settings and shortcuts.
+
 
 ## Installation
 
 Download or clone the repository and then run the bash file:
 
 ```bash
-./vscode-settings-and-extensions-import.sh
+./vscode-php-web.sh
 ```
 
 ### In case of permission issues
@@ -19,7 +22,7 @@ Download or clone the repository and then run the bash file:
 Run this command as administrator:
 
 ```bash
-sudo chmod u+x vscode-settings-and-extensions-import.sh
+sudo chmod u+x vscode-php-web.sh
 ```
 
 And then try running the file again
@@ -77,65 +80,263 @@ And then try running the file again
 
 ```json
 {
-  "[html]": { "editor.defaultFormatter": "vscode.html-language-features" },
-  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[jsonc]": { "editor.defaultFormatter": "vscode.json-language-features" },
-  "[python]": { "editor.defaultFormatter": "ms-python.python" },
-  "[shellscript]": { "editor.defaultFormatter": "shakram02.bash-beautify" },
-  "[svg]": { "editor.defaultFormatter": "jock.svg" },
-  "cSpell.userWords": ["Neutralino", "browserslist", "preconnect", "testid"],
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.tslint": true
-  },
-  "editor.cursorBlinking": "expand",
-  "editor.cursorSmoothCaretAnimation": false,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.fontFamily": "Fira Code",
+  "composerCompanion.enabled": true,
+  "composerCompanion.executablePath": "/usr/local/bin/composer",
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.fontFamily": "FuraCode Nerd Font",
+  "terminal.integrated.scrollback": 5000,
+  "editor.tabCompletion": "on",
   "editor.fontLigatures": true,
-  "editor.fontSize": 12.8,
-  "editor.formatOnSave": true,
-  "editor.suggestSelection": "first",
-  "editor.tabSize": 2,
-  "eslint.workingDirectories": [{ "mode": "auto" }],
-  "explorer.autoReveal": true,
-  "explorer.compactFolders": false,
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "git.autofetch": true,
-  "git.confirmSync": false,
-  "gitlens.currentLine.enabled": false,
-  "javascript.format.enable": false,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "javascript.validate.enable": false,
-  "multiCommand.commands": [
+  "editor.fontFamily": "Firicico",
+  "editor.lightbulb.enabled": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          //following will be in italics (=Pacifico)
+          "comment",
+          "entity.name.type.class", //class names
+          "keyword", //import, export, return…
+          //"support.class.builtin.js", //String, Number, Boolean…, this, super
+          "storage.modifier", //static keyword
+          "storage.type.class.js", //class keyword
+          "storage.type.function.js", // function keyword
+          "storage.type.js", // Variable declarations
+          "keyword.control.import.js", // Imports
+          "keyword.control.from.js", // From-Keyword
+          //"entity.name.type.js", // new … Expression
+          "keyword.control.flow.js", // await
+          "keyword.control.conditional.js", // if
+          "keyword.control.loop.js", // for
+          "keyword.operator.new.js" // new
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": [
+          //following will be excluded from italics (My theme (Monokai dark) has some defaults I don't want to be in italics)
+          "invalid",
+          "comment",
+          "keyword.operator",
+          "constant.numeric.css",
+          "keyword.other.unit.px.css",
+          "constant.numeric.decimal.js",
+          "constant.numeric.json",
+          "entity.name.type.class.js"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  },
+  "eslint.alwaysShowStatus": true,
+  "vetur.format.defaultFormatter.html": "prettyhtml",
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "html.format.enable": false,
+  "html-css-class-completion.enableEmmetSupport": true,
+  "explorer.openEditors.visible": 0,
+  "cSpell.enabledLanguageIds": [
+    "c",
+    "cpp",
+    "csharp",
+    "go",
+    "handlebars",
+    "javascript",
+    "javascriptreact",
+    "latex",
+    "markdown",
+    "php",
+    "plaintext",
+    "python",
+    "restructuredtext",
+    "text",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "yml",
+    "html"
+  ],
+  "cSpell.language": ",en-US,en",
+  "cSpell.userWords": [
+    "Gmail",
+    "lokijs",
+    "momenttz",
+    "myapp",
+    "Portainer",
+    "soluntide",
+    "Soluntide",
+    "stroustrup",
+    "styl",
+    "typeof"
+  ],
+  "workbench.startupEditor": "newUntitledFile",
+  "php-cs-fixer.onsave": false,
+  "window.openFilesInNewWindow": "on",
+  "importCost.typescriptExtensions": [
+    "\\.vue?$"
+  ],
+  "files.trimTrailingWhitespace": true,
+  "gitlens.keymap": "chorded",
+  "gitlens.advanced.messages": {
+    "suppressLineUncommittedWarning": true
+  },
+  "workbench.statusBar.feedback.visible": false,
+  "typescript.preferences.quoteStyle": "single",
+  "cSpell.allowCompoundWords": true,
+  "rest-client.previewResponseInUntitledDocument": true,
+  "colorInfo.languages": [
     {
-      "command": "multiCommand.commentDown",
-      "sequence": ["editor.action.commentLine", "cursorDown"]
+      "selector": "css",
+      "colors": "css"
+    },
+    {
+      "selector": "sass",
+      "colors": "css"
+    },
+    {
+      "selector": "scss",
+      "colors": "css"
+    },
+    {
+      "selector": "less",
+      "colors": "css"
+    },
+    {
+      "selector": "stylus",
+      "colors": "css"
     }
   ],
-  "quokka.automaticStartRegex": "",
-  "sort-imports.on-save": true,
-  "svg.preview.mode": "svg",
-  "tabnine.experimentalAutoImports": true,
-  "telemetry.telemetryLevel": "off",
-  "terminal.integrated.fontSize": 12,
-  "typescript.preferences.importModuleSpecifier": "relative",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "workbench.colorCustomizations": {
-    "editor.selectionBackground": "#3b3f51",
-    "editorCursor.background": "#3b3f51",
-    "editorCursor.foreground": "#ffcc00",
-    "editorSuggestWidget.background": "#181a1f",
-    "editorSuggestWidget.border": "#0f111a",
-    "editorSuggestWidget.highlightForeground": "#4bc8e8",
-    "editorSuggestWidget.selectedBackground": "#1f2233",
-    "focusBorder": "#84ffffbe"
+  "eslint.packageManager": "yarn",
+  "eslint.run": "onSave",
+  "vueDocs.lang": "en",
+  "vueDocs.links": {
+    "Quasar": "https://v1.quasar-framework.org/",
+    "Vue CLI": "https://cli.vuejs.org/",
+    "Vuetify": "https://vuetifyjs.com/getting-started/quick-start"
   },
-  "workbench.colorTheme": "Material Deep Ocean",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.tree.indent": 16
+  "breadcrumbs.enabled": true,
+  "vetur.completion.useScaffoldSnippets": false,
+  "docker.groupImagesBy": "Repository",
+  "markdown.preview.breaks": true,
+  "window.openFoldersInNewWindow": "off",
+  "window.menuBarVisibility": "visible",
+  "git.autofetch": true,
+  "todo-tree.tree.showScanModeButton": false,
+  "docker-explorer.showAzureRegistries": false,
+  "docker-explorer.showDockerHubTreeView": false,
+  "docker-explorer.showSuggestedDockerImages": false,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": false
+  },
+  "tabnine.experimentalAutoImports": true,
+  "xmlTools.enableXmlTreeViewCursorSync": true,
+  "git.enableSmartCommit": true,
+  "sonarlint.rules": {
+    "javascript:S905": {
+      "level": "off"
+    },
+    "typescript:S125": {
+      "level": "off"
+    },
+    "php:S125": {
+      "level": "off"
+    }
+  },
+  "workbench.editor.untitled.hint": "hidden",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "yaml.customTags": [
+    "!encrypted/pkcs1-oaep scalar",
+    "!vault scalar"
+  ],
+  "ansible.validate.executablePath": "ansible-lint",
+  "GithubGistExplorer.explorer.gistSortBy": "Last Updated",
+  "GithubGistExplorer.explorer.gistAscending": false,
+  "GithubGistExplorer.explorer.subscriptionSortBy": "Last Updated",
+  "GithubGistExplorer.explorer.subscriptionAscending": false,
+  "redhat.telemetry.enabled": true,
+  "cSpell.enableFiletypes": [
+    "!nunjucks",
+    "html"
+  ],
+  "vscode-edge-devtools.headless": true,
+  "vscode-edge-devtools.mirrorEdits": true,
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": true,
+    "php": true
+  },
+  "window.zoomLevel": 1,
+  "snyk.yesWelcomeNotification": false,
+  "files.autoSave": "afterDelay",
+  "sync.forceUpload": true,
+  "workbench.iconTheme": "vscode-icons",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "reactSnippets.settings.prettierEnabled": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "diffEditor.maxComputationTime": 0,
+  "php.suggest.basic": false,
+  "php.validate.enable": false,
+  "emmet.excludeLanguages": [
+    "markdown",
+    "php"
+  ],
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "editor.gotoLocation.multipleDeclarations": "goto",
+  "[json]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "editor.minimap.enabled": false,
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "intelephense.environment.phpVersion": "7.2",
+  "intelephense.files.exclude": [
+    "**/.git/**",
+    "**/.svn/**",
+    "**/.hg/**",
+    "**/CVS/**",
+    "**/.DS_Store/**",
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/vendor/**/{Tests,tests}/**",
+    "**/.history/**",
+    "**/vendor/**/vendor/**",
+    "**/data/**",
+    "**/internal_data/**"
+  ],
+  "markdown.preview.fontSize": 12,
+  "workbench.sideBar.location": "right",
+  "editor.fontSize": 14,
+  "bookmarks.sideBar.expanded": true,
+  "vscode-edge-devtools.fallbackRevision": "@a485c16d1ab76394f5d7397e15c0d7583d5259c1",
+  "[html]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "editor.formatOnSaveMode": "modifications",
+  "intelephense.format.enable": false,
+  "bookmarks.experimental.enableNewStickyEngine": false,
+  "html.format.preserveNewLines": false,
+  "lit-html.format.enabled": false,
+  "javascript.format.enable": false,
+  "vetur.format.options.tabSize": 4
 }
 ```
 
