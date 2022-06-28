@@ -84,11 +84,11 @@ And then try running the file again
   "terminal.external.osxExec": "iTerm.app",
   // "terminal.integrated.shell.osx": "/bin/zsh",
   "terminal.integrated.defaultProfile.linux": "zsh",
-  "terminal.integrated.fontFamily": "FuraCode Nerd Font",
+  "terminal.integrated.fontFamily": "Fira Code",
   "terminal.integrated.scrollback": 5000,
   "editor.tabCompletion": "on",
   "editor.fontLigatures": true,
-  "editor.fontFamily": "Firicico",
+  "editor.fontFamily": "Fira Code",
   "editor.lightbulb.enabled": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.tokenColorCustomizations": {
