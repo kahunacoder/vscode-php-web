@@ -11,6 +11,10 @@ sleep 0.25
 echo "---------------------------------------"
 sleep 0.25
 echo ""
+sleep 0.25
+echo "Installing recommended extensions. Ignore these error messages DeprecationWarning: Buffer() is deprecated."
+echo "This may take a while..."
+echo ""
 rm -Rf ~/.vscode/extensions/*
 code --install-extension aaron-bond.better-comments
 code --install-extension adamwalzer.string-converter
@@ -103,7 +107,7 @@ code --install-extension formulahendry.auto-close-tag-0.5.14
 echo ""
 echo "The extensions have been successfully installed."
 sleep 0.25
-echo ""
+echo "---------------------------------------"
 sleep 0.25
 echo "Installing fonts and sshfs (fuse)."
 sleep 0.25
@@ -116,7 +120,7 @@ sudo apt install fonts-firacode sshfs
 echo ""
 echo "Fonts and sshfs (fuse) have been successfully installed."
 sleep 0.25
-echo ""
+echo "---------------------------------------"
 sleep 0.25
 echo ""
 echo "Updating settings file."
@@ -127,7 +131,7 @@ echo '{ "composerCompanion.enabled": true, "composerCompanion.executablePath": "
 echo ""
 echo "The settings file have been successfully updated."
 sleep 0.25
-echo ""
+echo "---------------------------------------"
 echo "VS Code Settings for Full Stack Web Development with PHP has finished installing"
 sleep 0.25
 echo ""
