@@ -12,7 +12,9 @@ echo "---------------------------------------"
 sleep 0.25
 echo ""
 sleep 0.25
-echo "Installing recommended extensions. Ignore these error messages DeprecationWarning: Buffer() is deprecated."
+echo "Installing the recommended extensions."
+echo "Ignore these error messages DeprecationWarning: Buffer() is deprecated."
+sleep 0.25
 echo "This may take a while..."
 echo ""
 rm -Rf ~/.vscode/extensions/*
@@ -132,6 +134,8 @@ echo ""
 echo "The settings file have been successfully updated."
 sleep 0.25
 echo "---------------------------------------"
-echo "VS Code Settings for Full Stack Web Development with PHP has finished installing"
+echo "Visual Studio Code Settings for Full Stack Web Development with PHP has finished installing"
+sleep 0.25
+echo "You may open Visual Studio Code to finish the installation."
 sleep 0.25
 echo ""
