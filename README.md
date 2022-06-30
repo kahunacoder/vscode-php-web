@@ -16,7 +16,7 @@ Installation has been tested on Linux Mint but should work with most ubuntu syst
 
 Follow this link to install Visual Studio Code [Download Visual Studio Code](https://code.visualstudio.com/Download)
 
-> **CAUTION** this installation will relace any extensions or settings you currently have.
+> **CAUTION** this installation will **REPLACE** any extensions or settings you currently have.
 > You can alternatively install each extension individually by clicking on the links below.
 
 
