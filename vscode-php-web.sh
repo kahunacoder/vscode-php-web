@@ -112,7 +112,7 @@ sudo add-apt-repository universe
 sudo apt update
 sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
 sudo apt update
-sudo apt install fonts-firacode sshfs default-jre
+sudo apt install fonts-firacode sshfs
 echo ""
 echo "Fonts and sshfs (fuse) have been successfully installed."
 sleep 0.25
