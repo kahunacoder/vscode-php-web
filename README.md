@@ -12,7 +12,7 @@ Also installed is [Fuse (sshfs)](https://en.wikipedia.org/wiki/SSHFS) for workin
 
 ## Installation
 
-Installation has been tested on Linux Mint but should work with most ubuntu systems.
+Installation has been tested on Linux Mint, using Virtual Box, but should work with most ubuntu systems.
 
 Follow this link to install Visual Studio Code [Download Visual Studio Code](https://code.visualstudio.com/Download)
 
@@ -26,6 +26,9 @@ With curl and Visual Studio Code installed:
 curl -s https://raw.githubusercontent.com/kahunacoder/vscode-php-web/master/vscode-php-web.sh | bash
 ```
 
+You will be asked for your password to install sshfs and the fira code font.
+
+After installation, start Visual Studio Code and follow the on screen instructions. The SonarLint language server needs a Java Runtime, Visual Studio Code will ask for your permission to download and manage the JRE and then restart Visual Studio Code.
 
 ### List of extensions to be installed
 
