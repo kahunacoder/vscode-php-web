@@ -8,17 +8,19 @@ Extensions and settings are mainly configured for **full stack web development**
 
 The settings use the **[Fira Code](https://github.com/tonsky/FiraCode)** font, so it is also installed when installing extensions and importing settings.
 
-Also installed is Fuse (sshfs) for working with remote files over ssh.
+Also installed is [Fuse (sshfs)](https://en.wikipedia.org/wiki/SSHFS) for working with remote files over ssh.
 
 ## Installation
 
 Installation has been tested on Linux Mint but should work with most ubuntu systems.
 
+Follow this link to install Visual Studio Code [Download Visual Studio Code](https://code.visualstudio.com/Download)
+
 > **CAUTION** this installation will relace any extensions or settings you currently have.
 > You can alternatively install each extension individually by clicking on the links below.
 
 
-With curl installed:
+With curl and Visual Studio Code installed:
 
 ```bash
 curl -s https://raw.githubusercontent.com/kahunacoder/vscode-php-web/master/vscode-php-web.sh | bash
