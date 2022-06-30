@@ -1,4 +1,4 @@
-# VS Code Settings for Full Stack Web Development with PHP
+# Visual Studio Code Settings for Full Stack Web Development with PHP
 
 These are the extensions, settings, fonts and applications I use for web development using vscode.
 
@@ -10,23 +10,43 @@ The settings use the **[Fira Code](https://github.com/tonsky/FiraCode)** font, s
 
 Also installed is [Fuse (sshfs)](https://en.wikipedia.org/wiki/SSHFS) for working with remote files over ssh.
 
-## Installation
-
 Installation has been tested on Linux Mint, using Virtual Box, but should work with most ubuntu systems.
 
 Follow this link to install Visual Studio Code [Download Visual Studio Code](https://code.visualstudio.com/Download)
 
-> **CAUTION** this installation will **REPLACE** any extensions or settings you currently have.
-> You can alternatively install each extension individually by clicking on the links below.
-
+## Installation
 
 With curl and Visual Studio Code installed:
+
+> **CAUTION** this installation will **REPLACE** any extensions or settings you currently have.
 
 ```bash
 curl -s https://raw.githubusercontent.com/kahunacoder/vscode-php-web/master/vscode-php-web.sh | bash
 ```
 
 You will be asked for your password to install sshfs and the fira code font.
+
+## Alternate Installation Method
+
+Download or clone the repository and then edit or run the bash file as needed:
+
+```bash
+./vscode-php-web.sh
+```
+
+### In case of permission issues
+
+Run this command as administrator:
+
+```bash
+sudo chmod u+x vscode-php-web.sh
+```
+
+And then try running the file again
+
+> You can alternatively install each extension individually by clicking on the links below.
+
+## Post Installation
 
 After installation, start Visual Studio Code and follow the on screen instructions. The SonarLint language server needs a Java Runtime, Visual Studio Code will ask for your permission to download and manage the JRE and then restart Visual Studio Code.
 

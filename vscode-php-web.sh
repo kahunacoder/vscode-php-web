@@ -6,7 +6,7 @@ echo "Email: open_source@kc.gs"
 sleep 0.25
 echo "Github: https://github.com/kahunacoder/vscode-php-web"
 sleep 0.25
-echo ""
+echo "Installing Visual Studio Code Settings for Full Stack Web Development with PHP"
 sleep 0.25
 echo "---------------------------------------"
 sleep 0.25
